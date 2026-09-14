@@ -1,0 +1,51 @@
+name: Update Brooke Message
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update message ending
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          # Remove any standalone paragraph that refers to reading the message.
+          text = re.sub(r'\s*<p>[^<]*(?:after|once|when)[^<]*(?:read|reading)[^<]*</p>', '', text, flags=re.I)
+
+          old = '<p>Thank you so very much for your love and help!</p>'
+          new = '<p>Please send your video ASAP! And thank you so so so very much for your help!</p>'
+          if old in text:
+              text = text.replace(old, new, 1)
+          elif new not in text:
+              raise SystemExit('Could not find the existing thank-you line to replace.')
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit updated page
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git diff --cached --quiet || git commit -m 'Update Brooke video request ending'
+          git push
+
+      - name: Remove temporary workflow
+        run: |
+          git rm .github/workflows/update-brooke-message.yml
+          git commit -m 'Remove temporary update workflow'
+          git push
