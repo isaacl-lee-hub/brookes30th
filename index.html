@@ -3,140 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brooke's 30th birthday video</title>
+<meta name="theme-color" content="#000000">
+<title>Brooke's 30th Birthday Video</title>
 <style>
-  :root{
-    --bg:#000000;
-    --fg:#ffffff;
-    --muted:#b3b3b3;
-  }
-  *{box-sizing:border-box;}
-  html,body{
+  :root { --bg:#000; --fg:#fff; --muted:#aaa; --line:#2a2a2a; }
+  * { box-sizing:border-box; }
+  html { background:var(--bg); }
+  body {
     margin:0;
-    padding:0;
     background:var(--bg);
     color:var(--fg);
-  }
-  body{
-    font-family: Helvetica, Arial, sans-serif;
+    font-family:Helvetica,Arial,sans-serif;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  .header{
+  .header {
     text-align:center;
-    padding:32px 24px 0;
+    padding:34px 24px 22px;
   }
-  .hero{
-    width:100%;
+  .kicker {
+    margin-bottom:8px;
+    color:var(--muted);
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+  }
+  h1 {
+    margin:0;
+    font-size:28px;
+    line-height:1.2;
+    font-weight:700;
+  }
+  .hero { width:100%; }
+  .hero img {
     display:block;
-    margin:16px 0 0 0;
-  }
-  .hero img{
     width:100%;
     height:auto;
-    display:block;
   }
-  .content{
-    max-width:640px;
+  .content {
+    width:100%;
+    max-width:680px;
     margin:0 auto;
-    padding:20px 24px 64px;
+    padding:30px 24px 64px;
   }
-  .kicker{
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:12px;
-    color:var(--muted);
-    margin-bottom:8px;
-  }
-  h1{
-    font-size:26px;
-    line-height:1.3;
-    margin:0 0 28px 0;
-    font-weight:700;
-  }
-  p{
+  p {
+    margin:0 0 20px;
     font-size:16px;
-    margin:0 0 18px 0;
-    text-align:left;
   }
-  .photo{
-    display:block;
-    max-width:220px;
-    width:60%;
-    margin:0 auto 24px auto;
-    border-radius:14px;
-    border:2px solid #333;
-  }
-  .signoff{
-    margin-top:32px;
-  }
-  .signoff p{
-    margin:0 0 4px 0;
-  }
-  .note{
-    font-size:13px;
-    color:var(--muted);
-    font-style:italic;
-    margin-top:28px;
-  }
-  .cta{
+  .cta {
     display:flex;
     flex-direction:column;
-    gap:14px;
-    margin:36px 0 32px 0;
+    gap:12px;
+    margin:30px 0 34px;
   }
-  .btn{
+  .btn {
     display:block;
+    width:100%;
+    padding:16px 20px;
+    border:2px solid var(--fg);
+    border-radius:8px;
+    background:var(--fg);
+    color:var(--bg);
     text-align:center;
     text-decoration:none;
-    text-transform:uppercase;
+    font-size:15px;
     font-weight:700;
-    font-size:16px;
-    letter-spacing:0.3px;
-    padding:16px 20px;
-    border-radius:8px;
-    border:2px solid var(--fg);
-    color:var(--bg);
-    background:var(--fg);
-    transition:opacity 0.15s ease;
+    letter-spacing:.4px;
+    text-transform:uppercase;
   }
-  .btn:active{opacity:0.7;}
-  @media (min-width:480px){
-    .cta{flex-direction:row;}
-    .btn{flex:1;}
+  .btn.secondary { background:transparent; color:var(--fg); }
+  .signoff {
+    margin-top:34px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  .signoff p { margin:0 0 3px; }
+  @media (min-width:560px) {
+    .cta { flex-direction:row; }
+    .btn { flex:1; }
   }
 </style>
 </head>
 <body>
-  <div class="header">
+  <header class="header">
     <div class="kicker">A small favor</div>
     <h1>Brooke's 30th birthday video</h1>
-  </div>
+  </header>
 
   <div class="hero">
     <img src="collage.jpg" alt="Brooke">
   </div>
 
-  
-    <p>Hi there! This is Isaac Lee.</p>
+  <main class="content">
+    <p>It’s Brooke Mason’s 30th birthday this Friday! This Saturday is a family/friends party in Georgia. A video is being made for her to be shown at the party that gives everybody a brief moment to express their love and gratitude for her in a fun/creative way through film and photos.</p>
 
-    <p>It's Brooke Mason's 30th birthday this Friday, and this Saturday is her family/friends party in Georgia. I'm attempting to make a little video for her to show at the party and give everybody a moment to express their love and gratitude for her in this creative format. I think it'll be sweet.</p>
+    <p>If you can squeeze a few minutes into your schedule, record and send a selfie video or voice memo talking about 1 or maybe 2 things you love the most about Brooke, that would be truly epic. It can’t be longer than 60 seconds, as she has literally 1,925,801,615 friends and fitting everything into the cut will require some magic. If you can’t, or would prefer not to send a video/voice memo at all, shame on you. [It’s okay.]</p>
 
-    <p>Here's what I need from you: If you can squeeze a few minutes into your schedule, record and send a selfie video or voice memo talking about <strong>1 or maybe 2 things you love the most about Brooke</strong>, that would be truly epic. It can't be longer than <strong>60 seconds</strong>, as she has literally 1,925,801,615 friends and I don't know how I'm gonna fit everything into this cut. If you can't, or would prefer not to send a video/voice memo at all, shame on you. (It's okay.) You need to rethink your life. (You don't. I get it. We're all busy.)</p>
+    <p>You can record this video or audio in your car, living room, porch, a store, your kitchen, really anywhere. Doesn’t matter. Just make sure it’s max 60 seconds, honest, and true to you and her, and then just send the raw file (no links) from your photo roll to the email below OR upload it directly to the Google Drive folder.</p>
 
-    <p>You can record this video or audio in your car, living room, porch, a store, your kitchen, really anywhere. Doesn't matter. Just make sure it's <strong>max 60 seconds</strong>, honest, and true to you and her, and then just send the raw file (no links) from your photo roll to the email below <strong>OR</strong> upload it directly to the Google Drive folder below — as soon as earthly possible. And I mean, actually as soon as possible, as I'm already cutting it way too close here due to&nbsp;&hellip; life.</p>
+    <p>Please do this as soon as earthly possible. We only have 2 days for this video to be presentable, so our editor, Isaac (me), will be working OT to get this done. This needs to be excellent, and we want Brooke to have the best birthday yet.</p>
 
     <div class="cta">
       <a class="btn" href="https://drive.google.com/drive/folders/1-vyHJAEmpvOdwQHJWza8YZvUE-7vhZ53?usp=drive_link" target="_blank" rel="noopener">Upload to Google Drive</a>
       <a class="btn secondary" href="mailto:itsisaaclee@gmail.com?subject=Brooke%27s%20Birthday%20Video">Send via Email</a>
     </div>
 
-    <p>Please send your video ASAP! And thank you so so so very much for your help!</p>
+    <p>Thank you so much for your love and help.</p>
 
     <div class="signoff">
-      <p>God bless you,</p>
-      <p><strong>Isaac</strong></p>
+      <p>God bless you!</p>
     </div>
-  </div>
+  </main>
 </body>
 </html>
